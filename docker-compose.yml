@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    container_name: leadmap-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    restart: unless-stopped
+    networks:
+      - leadmap-network
+
+  frontend:
+    build: ./frontend
+    container_name: leadmap-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000/api
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - leadmap-network
+
+networks:
+  leadmap-network:
+    driver: bridge

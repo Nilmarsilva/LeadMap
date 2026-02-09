@@ -1,0 +1,83 @@
+LICENÇA DE USO COMERCIAL - LeadMap
+
+Copyright © 2025 LeadMap. Todos os direitos reservados.
+
+TERMOS DE LICENÇA PARA REVENDA
+
+1. CONCESSÃO DE LICENÇA
+   Esta licença permite ao comprador:
+   - Usar o software para fins comerciais
+   - Customizar o software para clientes
+   - Revender o software com modificações
+   - Instalar em múltiplos ambientes
+
+2. RESTRIÇÕES
+   O comprador NÃO pode:
+   - Remover créditos e atribuições originais
+   - Redistribuir o código fonte publicamente sem autorização
+   - Vender o código fonte bruto sem modificações substanciais
+   - Utilizar a marca "LeadMap" sem autorização
+
+3. ISENÇÃO DE RESPONSABILIDADE
+   - O software é fornecido "COMO ESTÁ"
+   - Não há garantias de funcionamento contínuo
+   - O desenvolvedor não se responsabiliza por custos de API do Google
+   - O comprador é responsável por configuração e manutenção
+   - Não há garantia de suporte técnico
+
+4. CUSTOS DE TERCEIROS
+   - A Google Places API tem custos próprios
+   - O comprador deve configurar e gerenciar sua própria API Key
+   - Custos da API são de responsabilidade do usuário final
+   - Monitore o uso para evitar cobranças inesperadas
+
+5. PROPRIEDADE INTELECTUAL
+   - O código fonte permanece protegido por direitos autorais
+   - Modificações e customizações podem ser realizadas
+   - Créditos originais devem ser mantidos em arquivo separado
+
+6. USO PERMITIDO
+   ✅ Instalar para uso próprio
+   ✅ Instalar para clientes (com ou sem custo)
+   ✅ Customizar interface e funcionalidades
+   ✅ Adicionar recursos extras
+   ✅ White-label (com consentimento)
+   ✅ Uso em projetos comerciais
+
+7. SUPORTE
+   - Suporte técnico não está incluído
+   - Documentação fornecida "como está"
+   - Comunidade pode criar fóruns de suporte
+   - Atualizações não são garantidas
+
+8. VENDA E REDISTRIBUIÇÃO
+   Ao vender este software:
+   - Informe ao cliente sobre custos da Google API
+   - Forneça documentação de instalação
+   - Não faça promessas sobre funcionalidades não implementadas
+   - Deixe claro que APIs de terceiros têm custos próprios
+
+9. COMPLIANCE
+   O comprador é responsável por:
+   - Conformidade com termos de uso do Google
+   - Leis de proteção de dados (LGPD, GDPR, etc.)
+   - Termos de uso em seu país/região
+   - Licenças de software de terceiros
+
+10. RESCISÃO
+    Esta licença permanece válida enquanto os termos forem respeitados.
+    Violações podem resultar em:
+    - Perda do direito de uso
+    - Ação legal cabível
+    - Retirada de suporte (se houver)
+
+CONTATO
+Para dúvidas sobre licenciamento, entre em contato através da documentação
+fornecida com o software.
+
+---
+
+AO USAR ESTE SOFTWARE, VOCÊ CONCORDA COM TODOS OS TERMOS ACIMA.
+
+Data: Janeiro de 2025
+Versão da Licença: 1.0

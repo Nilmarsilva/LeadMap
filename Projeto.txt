@@ -1,0 +1,212 @@
+Objetivo: Desenvolver uma aplicação completa em React + FastAPI, chamada LeadMap, que busca empresas no Google Maps (Google Places API), identifica as que não possuem site, e permite exportar os resultados para CSV.
+O sistema será vendido como script direto (licença única), e deverá ser limpo, moderno e fácil de configurar localmente.
+
+🎯 Descrição do Projeto
+
+LeadMap é uma ferramenta de prospecção automática que permite encontrar empresas sem site a partir de um termo de busca como “advogado em São Paulo”, “clínica odontológica em Recife”, etc.
+O sistema usa a Google Places API para retornar os dados e apresenta tudo em um painel organizado.
+
+O usuário insere o termo no frontend → o backend faz a busca → exibe os resultados com filtros → permite exportar para CSV.
+
+⚙️ Tecnologias e Stack
+
+Frontend:
+
+React (com Vite ou Next.js, escolha a mais simples)
+
+TailwindCSS (estilo limpo e escuro)
+
+Axios (para chamadas à API)
+
+shadcn/ui para componentes
+
+Lucide-react para ícones
+
+Backend:
+
+Python + FastAPI
+
+requests (para chamadas à API do Google)
+
+pandas (para manipulação e exportação CSV)
+
+Uvicorn (servidor)
+
+dotenv (configuração da API_KEY)
+
+Infraestrutura e Entrega:
+
+Projeto deve rodar localmente via Docker (backend + frontend)
+
+Um único comando docker-compose up inicia tudo
+
+Entregar README.md com passo a passo de uso e configuração
+
+📦 Arquitetura de Pastas
+leadmap/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── routes/
+│   │   │   └── search.py
+│   │   ├── services/
+│   │   │   └── google_places.py
+│   │   ├── utils/
+│   │   │   └── export_csv.py
+│   │   ├── models/
+│   │   │   └── lead.py
+│   ├── Dockerfile
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── components/
+│   │   │   ├── SearchBar.jsx
+│   │   │   ├── ResultsTable.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   └── Header.jsx
+│   ├── Dockerfile
+│   └── package.json
+│
+├── docker-compose.yml
+└── README.md
+
+🧩 Funcionalidades Obrigatórias
+Frontend
+
+Campo de busca (“Digite o tipo de negócio e cidade”)
+
+Botão “Buscar”
+
+Loader de carregamento
+
+Tabela com colunas:
+
+Nome
+
+Telefone
+
+Endereço
+
+Website
+
+Avaliação
+
+Link do Google Maps
+
+Filtro automático: mostrar apenas empresas sem website
+
+Botão “Exportar CSV”
+
+Interface moderna, dark e minimalista
+
+Exibir contagem de resultados e tempo de execução
+
+Backend
+
+Endpoint /search (POST)
+
+Parâmetro: query
+
+Retorna JSON com lista de empresas
+
+Serviço que consome a Google Places API:
+
+Busca pelo termo informado
+
+Pega os place_id e consulta detalhes de cada empresa
+
+Retorna nome, telefone, endereço, website, rating e URL do Maps
+
+Endpoint /export (POST)
+
+Recebe lista e exporta CSV (via pandas)
+
+Controle de erros (limite da API, sem resultados, etc.)
+
+Arquivo .env com GOOGLE_API_KEY
+
+Configuração pronta para Docker e execução local (docker-compose up)
+
+🧠 Regras e Qualidade
+
+Código limpo e bem comentado
+
+Responsivo (desktop e mobile)
+
+Tratamento visual de loading e erros
+
+Backend preparado para uso em produção (ex: CORS habilitado)
+
+Arquivo README.md explicando:
+
+Como obter a Google API Key
+
+Como rodar o sistema via Docker
+
+Como fazer a busca e exportar resultados
+
+Todos os textos da UI em português
+
+💰 Objetivo Comercial
+
+O projeto será vendido como script completo (não SaaS).
+Portanto, o foco é:
+
+código limpo e fácil de redistribuir;
+
+instalação simples;
+
+interface profissional;
+
+sem dependência de serviços externos além da Google API;
+
+permitir personalização (logo, nome, cores).
+
+🎨 Design / Estilo Visual
+
+Tema escuro (dark mode)
+
+Layout centralizado e minimalista
+
+Botões com efeito hover
+
+Logo “LeadMap” no topo, com ícone de mapa
+
+Fonte Inter ou Roboto
+
+Rodapé discreto: “LeadMap © 2025”
+
+🧱 Diferenciais Extras (para agregar valor na venda)
+
+Mostre quantas empresas não têm site em destaque (ex: “Foram encontradas 58 oportunidades!”)
+
+Opção de “Exportar apenas sem site”
+
+Mensagem automática de prospecção (pré-gerada, sem IA):
+
+“Olá [nome]! Vi que sua empresa ainda não tem site. Posso criar uma versão moderna e rápida pra você? 😉”
+
+Logo personalizável (importar imagem)
+
+Página de configuração (alterar Google API Key direto pelo painel)
+
+📘 Entrega final esperada
+
+Ao final, o gerador deve entregar:
+
+Código completo (frontend + backend) pronto pra rodar com Docker.
+
+README.md com instruções.
+
+Arquivo .env.example com variável da API.
+
+Layout responsivo e estilizado (dark, moderno, com botão de exportar).
+
+Função completa e testada de busca e exportação CSV.
+
+🧩 Resumo do Prompt para IA
+
+Crie o sistema LeadMap conforme as especificações acima, utilizando React (frontend) e FastAPI (backend), com integração à Google Places API. O projeto deve ser estruturado, dockerizado e pronto para venda direta como script local, com código limpo, documentação e interface profissional escura. Inclua exportação CSV, filtros e design moderno.
